@@ -1,0 +1,37 @@
+import turtle
+kame=turtle.Turtle()
+kame.shape('turtle')
+kame.shapesize(2,2,3)
+kame.home()
+kame.clear()
+'''kame.penup()
+kame.forward(100)
+kame.left(90)
+kame.pendown()
+kame.circle(100)
+kame.penup()
+kame.home()
+kame.pendown()'''
+
+def center_circle():
+    kame.penup()
+    kame.forward(70)
+    kame.left(90)
+    kame.pendown()
+    kame.circle(100)
+    kame.left(90)
+    kame.penup()
+    kame.forward(70)
+    kame.pendown()
+#compile in the shell as: [import kame_func],
+#then to call center_circle() func write as kame_func.center_circle()     
+def center_circle2(target):
+    target.penup()
+    target.forward(100)
+    target.left(120)
+    target.pendown()
+    target.circle(80)
+    target.left(90)
+    target.penup()
+    target.forward(90)
+    target.pendown()

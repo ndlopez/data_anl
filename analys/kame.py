@@ -1,0 +1,82 @@
+import datetime
+today=datetime.datetime.now()
+print(today)
+import turtle
+kame=turtle.Turtle()
+kame.shape('turtle')
+kame.shapesize(2,2,3)
+'''kame.forward(50)
+kame.right(90)
+kame.backward(50)
+kame.left(180)
+print(kame.position())'''
+#kame.circle(100) kame.undo() kame.home() kame.clear()
+print(kame.getscreen().window_width())# =512
+print(kame.getscreen().window_height())# =450
+kame.goto(50,20)
+print(kame.position())
+print(kame.distance(0,0))
+kame.penup()
+kame.circle(30)
+print(kame.isdown())
+kame.pendown()
+print(kame.isdown())
+kame.home()
+kame.clear()
+for i in range(3):
+    kame.forward(100)
+    kame.left(120)
+kame.home()
+kame.clear()
+for i in range(5):
+    kame.forward(100)
+    kame.left(144)
+
+import random
+var=random.randint(10,200)
+print(var)
+kame.home()
+kame.clear()
+for i in range(3):
+    var=random.randint(10,200)
+    kame.left(var)
+#kame.left(var)
+'''while True:
+    kame.left(random.randint(1,200))
+    kame.forward(50)
+kame.home()
+kame.clear()
+kame.penup()
+kame.forward(100)
+kame.left(90)
+kame.pendown()
+kame.circle(100)
+kame.penup()
+kame.home()
+kame.pendown()
+while kame.distance(0,0) < 100:
+    kame.left(random.randint(1,200))
+    kame.forward(15)'''
+kame.home()
+kame.clear()
+kame.penup()
+kame.forward(100)
+kame.left(90)
+kame.pendown()
+kame.circle(100)
+print('drawing circle')
+kame.penup()
+kame.home()
+kame.pendown()
+data_file=open('kame.txt','w')
+while True:
+    kame.left(random.randint(1,360))
+    kame.forward(random.randint(1,50))
+    data=kame.position()
+    a=print(data)
+    #data=float(kame.position())
+    #data_file.write(data)
+    #data_file.write('\n')
+    if kame.distance(0,0)>100:
+       kame.undo()
+data_file.close()
